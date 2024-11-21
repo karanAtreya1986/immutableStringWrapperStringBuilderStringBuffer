@@ -1,0 +1,35 @@
+Immutable class-
+Objects created of immutable class cant be modified.
+String is immutable. All wrapper classes are immutable, datetime api, collection apis.
+
+Problems with immutable-
+Heap space issues. New objects will get created everytime, because same object cat be reused. Out of memory exception is problem.
+
+When work is done, we destroy the objects-
+How to do it.
+Str=null;
+Write this at end.
+Or if jvm stops then all objects nullified automatically.
+Use strings when the content is not to be modified. If you want to modify strings, use string buffer or string builder.
+
+String buffer is synchronised, thread-safe. Can easily work with multi thread application. Threads never interfere with each other. Slow because they are synchronised.
+String builder is non synchronised. Handle threading code separately. Fast, since non synchronised.
+
+String buffer and string builder are mutable classes. They don’t create objects every time. No unnecessary memory allocated.
+
+Advantages of string buffer and string builder-
+No slowing down.
+No deadlocks in cpu.
+No need to write separate null statements to release objects once done.
+
+In string we have Equals method to check content. 
+In string buffer and builder - No equals in string buffer. We need to use comparable interface or comparator interface.
+
+
+Where immutable used-
+Concurrent applications, when multiple request come, to avoid corruption in data.. No thread interference is present, there we can use them. Mainly used in synchronized areas.
+Immutable good for caching because values not changing.
+Use in multi-threaded environment.
+Immutable is thread safe by default.
+
+Objects are created with NEW keyword.
